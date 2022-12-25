@@ -20,7 +20,6 @@
 		B2BDE62829266CC3001C4942 /* AimaginatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDE62729266CC3001C4942 /* AimaginatorApp.swift */; };
 		B2BDE62A29266CC3001C4942 /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2BDE62929266CC3001C4942 /* MainView.swift */; };
 		B2BDE62C29266CC4001C4942 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BDE62B29266CC4001C4942 /* Assets.xcassets */; };
-		B2BDE62F29266CC4001C4942 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B2BDE62E29266CC4001C4942 /* Preview Assets.xcassets */; };
 		B2C7EB9A29439EED00991D69 /* ApiErrorNotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2C7EB9929439EED00991D69 /* ApiErrorNotificationView.swift */; };
 		B2D5AD8B293BF48F00FC5CC8 /* SoundManager in Frameworks */ = {isa = PBXBuildFile; productRef = B2D5AD8A293BF48F00FC5CC8 /* SoundManager */; };
 		B2D5AD91293BF84E00FC5CC8 /* complete.aiff in Resources */ = {isa = PBXBuildFile; fileRef = B2D5AD8D293BF84E00FC5CC8 /* complete.aiff */; };
@@ -47,7 +46,6 @@
 		B2BDE62729266CC3001C4942 /* AimaginatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AimaginatorApp.swift; sourceTree = "<group>"; };
 		B2BDE62929266CC3001C4942 /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		B2BDE62B29266CC4001C4942 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		B2BDE62E29266CC4001C4942 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		B2BDE63029266CC4001C4942 /* Aimaginator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Aimaginator.entitlements; sourceTree = "<group>"; };
 		B2C7EB9929439EED00991D69 /* ApiErrorNotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiErrorNotificationView.swift; sourceTree = "<group>"; };
 		B2D5AD8D293BF84E00FC5CC8 /* complete.aiff */ = {isa = PBXFileReference; lastKnownFileType = audio.aiff; path = complete.aiff; sourceTree = "<group>"; };
@@ -135,17 +133,8 @@
 				B2BDE63629266CE4001C4942 /* Code */,
 				B25D4A162928C42D00F878CF /* Resources */,
 				B2BDE63029266CC4001C4942 /* Aimaginator.entitlements */,
-				B2BDE62D29266CC4001C4942 /* Preview Content */,
 			);
 			path = Aimaginator;
-			sourceTree = "<group>";
-		};
-		B2BDE62D29266CC4001C4942 /* Preview Content */ = {
-			isa = PBXGroup;
-			children = (
-				B2BDE62E29266CC4001C4942 /* Preview Assets.xcassets */,
-			);
-			path = "Preview Content";
 			sourceTree = "<group>";
 		};
 		B2BDE63629266CE4001C4942 /* Code */ = {
@@ -237,7 +226,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				B2D5AD93293BF84E00FC5CC8 /* error.aiff in Resources */,
-				B2BDE62F29266CC4001C4942 /* Preview Assets.xcassets in Resources */,
 				B25D4A192928C49D00F878CF /* Localizable.strings in Resources */,
 				B2D5AD91293BF84E00FC5CC8 /* complete.aiff in Resources */,
 				B2D5AD92293BF84E00FC5CC8 /* question.aiff in Resources */,
@@ -407,13 +395,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Aimaginator/Aimaginator.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Aimaginator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = BEU2F6LPKF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
@@ -438,13 +427,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = Aimaginator/Aimaginator.entitlements;
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEAD_CODE_STRIPPING = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"Aimaginator/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "";
 				DEVELOPMENT_TEAM = BEU2F6LPKF;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
