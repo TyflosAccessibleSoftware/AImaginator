@@ -32,6 +32,16 @@ Press the button **Create new secret key** button to generate a new API key valu
 
 Keep the API key value in a secure place and type it in the right field in AImaginator application.
 
+## Read the images with VoiceOver
+
+VoiceOver is the screen reader for MacOS by Apple. Blind persons can explore MacOS apps using this software.
+
+VoiceOver includes a new function to recognize images and texts using an internal AI engine.
+
+Try to run VoiceOver, focus the image by Dall-E and press Control+Alt+Shift+L to order VoiceOver to recognize the image and enjoy yourself with the funny descriptions by VoiceOver. 
+
+You can [learn to use VoiceOver](https://www.apple.com/voiceover/info/guide/_1124.html)
+
 ## License
 
 This software was published under Copyright 2022 by Jonathan Chacón
