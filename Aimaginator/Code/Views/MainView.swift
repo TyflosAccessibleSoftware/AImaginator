@@ -9,11 +9,18 @@ struct MainView: View {
     @State private var isApiKeyQuestion: Bool = false
     var body: some View {
         VStack {
-            HeaderView()
-            Spacer()
+            Group {
+                HeaderView()
+                Spacer()
+            }
             if !viewModel.isAPIKeyError {
-                PictureFrameView(viewModel: viewModel)
-                BottomToolbarView(viewModel: viewModel)
+                Group {
+                    if viewModel.ocrForImage != "" {
+                        TextPanelView(text: viewModel.ocrForImage)
+                    }
+                    PictureFrameView(viewModel: viewModel)
+                    BottomToolbarView(viewModel: viewModel)
+                }
             } else {
                 ApiErrorNotificationView(action: {
                     isApiKeyQuestion = true

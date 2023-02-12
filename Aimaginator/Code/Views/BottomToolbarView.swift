@@ -34,6 +34,17 @@ struct BottomToolbarView: View {
             .padding(.horizontal, 10)
             .disabled(!viewModel.prompt.isEmpty && viewModel.isAvailable && !viewModel.isAPIKeyError ? false : true)
             
+            Button("Read") {
+                Sounds.playSound("question")
+                Task {
+                    await viewModel.getOcrForLoadedImage()
+                }
+            }
+            .buttonStyle(.borderedProminent)
+            .padding(.vertical, 15)
+            .padding(.horizontal, 10)
+            .disabled((viewModel.loadedImage != nil && viewModel.isAvailable && viewModel.imageURL != nil) ? false : true)
+            
             Button("Save") {
                 Sounds.playSound("question")
                 if let urlToSave = showSavePanel(viewModel.prompt), let imageUrl = viewModel.imageURL {

@@ -14,6 +14,8 @@
 "Close" = "Cerrar";
 "Image size" = "Tamaño";
 "Save" = "Guardar";
+"Read" = "Leer";
+"Describe" = "Describir";
 "Copy to clipboard" = "Copiar en el portapapeles";
 "Save the image" = "Guardar la imagen";
 "Choose a folder and a name to store the image." = "Elije una carpeta y un nombre para almacenar la imagen.";

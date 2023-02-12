@@ -1,5 +1,6 @@
 import Combine
 import SwiftUI
+import OCRHelper
 
 @MainActor final class MainViewModel: ObservableObject {
     private let urlSession: URLSession
@@ -7,6 +8,7 @@ import SwiftUI
     @Published public var isAPIKeyError : Bool = false
     @Published public var imageURL: URL?
     @Published public var imageDescription: String = ""
+    @Published public var ocrForImage: String = ""
     @Published public var imageSize: DallEImageSize = .small
     @Published public var loadedImage: Image?
     @Published public var isAvailable: Bool = false
@@ -107,5 +109,26 @@ import SwiftUI
             self.isError = true
             self.errorString = error.localizedDescription
         }
+    }
+    
+    public func getOcrForLoadedImage() async {
+        guard let url = imageURL else {
+            self.ocrForImage = ""
+            return
+        }
+        let ciImage = CIImage(contentsOf: url)
+        guard let image = ciImage?.cgImage else { return }
+        OCRHelper.recognize(cgImage: image, completed: { result, error in
+            guard let result = result else {
+                print(error!.localizedDescription)
+                return
+            }
+            var stringResult = ""
+            for item in result {
+                stringResult = "\(stringResult)\n\(item)"
+            }
+            self.ocrForImage = stringResult
+            print("OCR= \(self.ocrForImage)")
+        })
     }
 }
